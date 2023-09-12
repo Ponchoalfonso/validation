@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "build",
+    "esModuleInterop": true,
+    "lib": [
+      "es2019"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "index.ts"
+  ]
+}

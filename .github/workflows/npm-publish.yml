@@ -16,6 +16,8 @@ jobs:
           node-version: 18
           registry-url: 'https://registry.npmjs.org'
       - run: pnpm install
-      - run: pnpm publish --access public --no-git-checks
+      - name: Publish @ponch/validation to NPM
+        run: pnpm publish --access public --no-git-checks
+        working-directory: ./validation
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

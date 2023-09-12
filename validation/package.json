@@ -1,0 +1,36 @@
+{
+  "name": "@ponch/validation",
+  "version": "2.0.0",
+  "description": "A tool to make validations easy!",
+  "scripts": {
+    "test": "vitest run ./test/",
+    "compile": "tsc",
+    "prepare": "pnpm compile"
+  },
+  "files": [
+    "./build/**/*"
+  ],
+  "main": "./build/src/index.js",
+  "types": "./build/src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ponchoalfonso/validation.git"
+  },
+  "keywords": [
+    "validator",
+    "validate",
+    "validation"
+  ],
+  "author": "Alfonso Valencia",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Ponchoalfonso/validation/issues"
+  },
+  "homepage": "https://github.com/Ponchoalfonso/validation#readme",
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "gts": "^5.0.1",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3"
+  }
+}

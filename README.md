@@ -1,2 +1,7 @@
 # validation
-A tool to make validations easy!
+
+A TypeScript tool to make validations easy!
+
+```ts
+const validator = new Validator();
+```
