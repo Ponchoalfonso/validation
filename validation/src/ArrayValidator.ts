@@ -80,7 +80,7 @@ export class ArrayValidator<
       for (let i = 0; i < subject.length; i++) {
         const result = this.validator.validateSafe(subject[i]);
         if (result.invalid) (<any>invalid)[i] = result.invalid;
-        else if (result.value) value[i] = result.value;
+        else if (result.value !== undefined) value[i] = result.value;
       }
       if (errors.length > 0) invalid._errors = errors;
 

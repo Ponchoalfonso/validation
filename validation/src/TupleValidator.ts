@@ -134,7 +134,7 @@ export class TupleValidator<
       for (let i = 0; i < this.validators.length; i++) {
         const result = this.validators[i].validateSafe(subject[i]);
         if (result.invalid) (<any>invalid)[i] = result.invalid;
-        else if (result.value) value[i] = result.value;
+        else if (result.value !== undefined) value[i] = result.value;
       }
       // Run Validator for rest
       if (subject.length > this.validators.length && this.restValidator) {
@@ -142,7 +142,7 @@ export class TupleValidator<
         for (let i = offset; i < subject.length; i++) {
           const result = this.restValidator.validateSafe(subject[i]);
           if (result.invalid) (<any>invalid)[i] = result.invalid;
-          else if (result.value) value[i] = result.value;
+          else if (result.value !== undefined) value[i] = result.value;
         }
       }
       if (errors.length > 0) invalid._errors = errors;
