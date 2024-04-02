@@ -97,7 +97,7 @@ export class GroupValidator<
       for (const key in this.validators) {
         const result = this.validators[key].validateSafe(subject[key]);
         if (result.invalid) (<any>invalid)[key] = result.invalid;
-        else if (result.value) value[key] = result.value;
+        else if (result.value !== undefined) value[key] = result.value;
       }
       if (errors.length > 0) invalid._errors = errors;
 
